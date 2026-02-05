@@ -3,16 +3,18 @@
 
 void main()
 {
-    float basic_pay, hra, ta, tax, net_salary;
+    float basic_pay, hra, ta, tax, gross_salary, net_salary;
 
     printf("Enter your basic pay : ");
     scanf("%f",&basic_pay);
 
     hra = basic_pay*0.1;
     ta = basic_pay*0.05;
-    tax = basic_pay*0.02;
+    gross_salary = basic_pay + hra + ta ;
 
-    net_salary = basic_pay + hra + ta - tax;
+    tax = gross_salary*0.02;
+
+    net_salary = gross_salary - tax;
 
     printf("The net salary is %f \n",net_salary);
 }

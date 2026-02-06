@@ -1,6 +1,8 @@
 
 #include<stdio.h>
 
+//ASSIGNMENT 3 MULTIPLICATION TABLE
+
 void main()
 {
     int num, i;

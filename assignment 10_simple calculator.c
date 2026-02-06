@@ -14,16 +14,16 @@ int factorial(int n)
 
 void main()
 {
-    int a, b;
+    double a, b;
 
     printf("Enter any two positive numbers : ");
-    scanf("%d %d",&a, &b);
+    scanf("%lf %lf",&a, &b);
 
-    printf("The addition a+b is %d",a+b);
+    printf("The addition a+b is %lf",a+b);
 
-    printf("The subtraction a-b is %d",a-b);
+    printf("The subtraction a-b is %lf",a-b);
 
-    printf("The multiplication a*b is %d",a*b);
+    printf("The multiplication a*b is %lf",a*b);
 
     if(b==0)
     {
@@ -32,11 +32,11 @@ void main()
     }
     else
     {
-        printf("The division a/b is %d",a/b);
+        printf("The division a/b is %lf",a/b);
     }
 
-    printf("The exponent a to the power b is %d",(int)pow(a,b));
+    printf("The exponent a to the power b is %lf",pow(a,b));
 
-    printf("The factorials of a and b are %d %d ",factorial(a),factorial(b));
+    printf("The factorials of a and b are %d %d ",factorial((int)a),factorial((int)b));
 
 }

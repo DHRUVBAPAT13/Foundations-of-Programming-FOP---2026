@@ -3,7 +3,7 @@
 
 void main()
 {
-    float sub1, sub2, sub3, sub4, sub5, avg;
+    float sub1, sub2, sub3, sub4, sub5, total, avg;
 
     printf("Enter marks for subject 1 out of 100 : ");
     scanf("%f",&sub1);
@@ -20,29 +20,36 @@ void main()
     printf("\nEnter marks for subject 5  out of 100 :");
     scanf("%f",&sub5);
 
-    avg = (sub1+sub2+sub3+sub4+sub5)/5 ;
+    total = sub1+sub2+sub3+sub4+sub5 ;
+    avg = (total)/5 ;
 
-    printf("Your average marks are %.2f \n",avg);
+    if(sub1>=40 && sub2>=40 && sub3>=40 && sub4>=40 && sub5>=40)
+    {
+        printf("Result : PASS \n");
 
-    if(avg>75)
-    {
-        printf("Distinguished performance!\n");
-    }
-    else if(avg>=60 && avg<75)
-    {
-        printf("You have got first division\n");
-    }
-    else if(avg>=50 && avg<60)
-    {
-        printf("You have second division\n");
-    }
-    else if(avg>=50 && avg<50)
-    {
-        printf("You have third division\n");
+        if(avg>75)
+        {
+          printf("Distinguished performance!\n");
+        }
+        else if(avg>=60 && avg<75)
+        {
+            printf("You have grade : first division\n");
+        }
+        else if(avg>=50 && avg<60)
+        {
+            printf("You have grade : second division\n");
+        }
+        else if(avg>=50 && avg<50)
+        {
+            printf("You have grade : third division\n");
+        }
     }
     else
     {
-        printf("You have failed in the exam\n");
+        printf("Result : Fail\n");
     }
+    
+    printf("Total marks are %.2f \n",total);
+    printf("Your percentage is %.2f %% \n",avg);
 
 }

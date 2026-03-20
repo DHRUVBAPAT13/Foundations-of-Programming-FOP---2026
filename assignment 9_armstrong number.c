@@ -13,9 +13,7 @@ void main()
     while(orig!=0)
     {
         rem = orig%10 ;
-
         res = res + rem*rem*rem ;
-
         orig = orig/10 ;
 
     }

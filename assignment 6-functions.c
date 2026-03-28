@@ -11,7 +11,7 @@ long long int normal_Factorial(int n)
         }
         return fact;
     }
-    else
+    else if(n==0 || n==1)
     {
         return 1;
     }
@@ -21,7 +21,7 @@ long long int recursive_Factorial(int n)
 {
     if(n>=1)
         return n*recursive_Factorial(n-1); 
-    else 
+    else if(n==0 || n==1)
         return 1;
 }
 
@@ -30,8 +30,11 @@ void main()
     int n;
     printf("Enter a number : ");
     scanf("%d",&n);
-
-    printf("Factorial of %d by normal function = %lli. \n",n,normal_Factorial(n));
-    printf("Factorial of %d by recursive function = %lli. \n",n,recursive_Factorial(n));
-
+    if(n>=0)
+    {
+        printf("Factorial of %d by normal function = %lli. \n",n,normal_Factorial(n));
+        printf("Factorial of %d by recursive function = %lli. \n",n,recursive_Factorial(n));
+    }
+    else
+        printf("Invalid Input\n");
 }

@@ -18,18 +18,25 @@ void pointer_Swap(int *a, int *b)
     *a = *b;
     *b = temp;
 
-    printf("Swapping using pointers %d and %d\n", *a, *b);
+    printf("Swapping using pointers -> %d %d\n", *a, *b);
 }
 
-void main()
+int main()
 {
     int x, y;
     printf("Enter two numbers : ");
     scanf("%d %d",&x,&y);
 
-    printf("Numbers before swapping -> %d and %d",x,y);
+    printf("Numbers before swapping -> %d and %d\n",x,y);
 
-    normal_Swap(x,y);
+    printf("Enter your choice (1 for normal swap, 2 for pointer swap): ");
+    int choice;
+    scanf("%d", &choice);
 
-    pointer_Swap(&x,&y);
+    if (choice == 1) {
+        normal_Swap(x,y);
+    } else if (choice == 2) {
+        pointer_Swap(&x,&y);
+    }
+    return 0;
 }

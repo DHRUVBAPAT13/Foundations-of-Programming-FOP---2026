@@ -1,0 +1,6 @@
+hi, this is Dhruv Bapat
+this is just a simple text file used as source to be copied in an another text file named destination.txt
+
+nothing more
+
+ehe

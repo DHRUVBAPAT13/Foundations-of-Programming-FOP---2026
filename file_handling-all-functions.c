@@ -4,7 +4,7 @@
 int main()
 {
     FILE *fp ;
-    char data[] = "Hello World";
+    char data[] = "Jello World";
 
     char buffer[50];
 

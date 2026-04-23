@@ -10,7 +10,7 @@ void main()
     //seed generationa
     srand(time(0));
 
-    printf("The random numbers are : ")
+    printf("The random numbers are : ");
     for(int i=0;i<n;i++)
         {
             printf("%d",rand());
